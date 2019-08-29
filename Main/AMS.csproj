@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F15790F2-2FE8-4AF9-B281-D7957294C535}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AMS</RootNamespace>
+    <AssemblyName>Main</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\Management_car_categories.cs" />
+    <Compile Include="BL\Car_category.cs" />
+    <Compile Include="BL\Car_Management.cs" />
+    <Compile Include="BL\Customer_Add.cs" />
+    <Compile Include="BL\Login.cs" />
+    <Compile Include="BL\Orders.cs" />
+    <Compile Include="DAL\DataAccessLayer.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="PL\Addcar_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Addcar_Form.Designer.cs">
+      <DependentUpon>Addcar_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\AddCust_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\AddCust_Form.Designer.cs">
+      <DependentUpon>AddCust_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Adduser_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Adduser_Form.Designer.cs">
+      <DependentUpon>Adduser_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\CarListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\CarListForm.Designer.cs">
+      <DependentUpon>CarListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\CustomerList_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\CustomerList_Frm.Designer.cs">
+      <DependentUpon>CustomerList_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_Car_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_Car_Management.Designer.cs">
+      <DependentUpon>FRM_Car_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_Categories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_Categories.Designer.cs">
+      <DependentUpon>FRM_Categories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_Preview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_Preview.Designer.cs">
+      <DependentUpon>FRM_Preview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Main_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Main_Form.Designer.cs">
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Orders_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Orders_Frm.Designer.cs">
+      <DependentUpon>Orders_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\User_Managementform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\User_Managementform.Designer.cs">
+      <DependentUpon>User_Managementform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPT\FRM_RPT_CAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FRM_RPT_CAR.Designer.cs">
+      <DependentUpon>FRM_RPT_CAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\rpt_All_Car.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_All_Car.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\rpt_cat_management.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_cat_management.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\rpt_orders.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_orders.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\rpt_printorder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_printorder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="obj\Debug\AMS.PL.Addcar_Form.resources" />
+    <EmbeddedResource Include="obj\Debug\AMS.PL.FRM_Car_Management.resources" />
+    <EmbeddedResource Include="obj\Debug\AMS.PL.Login_Form.resources" />
+    <EmbeddedResource Include="obj\Debug\AMS.PL.Main_Form.resources" />
+    <EmbeddedResource Include="obj\Debug\AMS.Properties.Resources.resources" />
+    <EmbeddedResource Include="PL\Addcar_Form.resx">
+      <DependentUpon>Addcar_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\AddCust_Form.resx">
+      <DependentUpon>AddCust_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Adduser_Form.resx">
+      <DependentUpon>Adduser_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\CarListForm.resx">
+      <DependentUpon>CarListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\CustomerList_Frm.resx">
+      <DependentUpon>CustomerList_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_Car_Management.resx">
+      <DependentUpon>FRM_Car_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_Categories.resx">
+      <DependentUpon>FRM_Categories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_Preview.resx">
+      <DependentUpon>FRM_Preview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Main_Form.resx">
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Orders_Frm.resx">
+      <DependentUpon>Orders_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\User_Managementform.resx">
+      <DependentUpon>User_Managementform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RPT\FRM_RPT_CAR.resx">
+      <DependentUpon>FRM_RPT_CAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_All_Car.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_All_Car.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_cat_management.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_cat_management.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_orders.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_orders.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_printorder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_printorder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="bin\Debug\Main.exe.config" />
+    <None Include="obj\Debug\AMS.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\AMS.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no image1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no image2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Main.exe" />
+    <Content Include="bin\Debug\Main.pdb" />
+    <Content Include="obj\Debug\AMS.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Main.exe" />
+    <Content Include="obj\Debug\Main.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\3587420180208083427.jpeg" />
+    <None Include="Resources\Searchsvg.png" />
+    <None Include="Resources\search.jpg" />
+    <None Include="Resources\47774.png" />
+    <None Include="Resources\Banner.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
